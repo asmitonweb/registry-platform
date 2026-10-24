@@ -21,6 +21,7 @@ from openg2p_fastapi_common.app import Initializer as BaseInitializer
 from openg2p_fastapi_common.exception import BaseExceptionHandler        
 from openg2p_registry_core.services import (
     G2PAttributeValueValidator,
+    G2PWidgetRuleValidator,
     G2PAweIntegrationService,
     G2PAwePolicyConfigurationService,
     G2PDocumentService,
@@ -68,6 +69,7 @@ class Initializer(BaseInitializer):
         G2PChangeRequestWorkerService()
         G2PGeoHierarchyService()
         G2PAttributeValueValidator()
+        G2PWidgetRuleValidator()
 
         # Factories
         G2PRegisterDomainFactory()

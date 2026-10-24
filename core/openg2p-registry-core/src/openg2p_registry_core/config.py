@@ -91,6 +91,12 @@ class Settings(IamSettings):
     # removable, since they are the only thing checking values until then.
     validate_attribute_values: bool = False
 
+    # Apply each section's widget-data-validation (required, pattern, length,
+    # range, show/hide/require actions) on the server, as the staff portal does
+    # in the browser. Off by default: with it off, a record from bulk import, the
+    # partner API or ingestion is checked only against the schema and code lists.
+    validate_widget_rules: bool = False
+
     # AWE (Approval Workflow Engine) client
     awe_enabled: bool = False
     # Host only, e.g. https://awe.dev.openg2p.org (do not include /v1/awe)
